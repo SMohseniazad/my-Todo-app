@@ -5,7 +5,7 @@ taskBox = document.querySelector(".task-box"),
 ulBox = document.querySelector(".ultask");
 showTodos ();
 function addNewItems(value){
-    
+    // reza comment
     let userTask = inputBox.value.trim();
     if(userTask != ''){
             ulBox.innerHTML += `
