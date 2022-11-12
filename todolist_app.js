@@ -37,13 +37,13 @@ function getTodos(){
     var todosString = localStorage.getItem('todos');
     return todosString ? JSON.parse(todosString) : [];
 }
-function savaTodos(todos){
+function saveTodos(todos){
     localStorage.setItem('todos', JSON.stringify(todos));
 }
 function saveTodo(value){
     var todos = getTodos();
     todos.push(value);
-    savaTodos(todos);
+    saveTodos(todos);
 }
 function showTodos (todos){
     let previousTodos = getTodos();
