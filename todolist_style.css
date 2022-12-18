@@ -1,28 +1,26 @@
-body{
+body {
     font-family: sans-serif;
-    background-color:black;
+    background-color: black;
     display: flex;
-
-}
-.app{
+  }
+  #app {
     max-width: 400px;
     display: flex;
     flex-grow: 1;
     margin: 20px auto;
     flex-direction: column;
-    background-color:#66C2FE;
+    background-color: #66c2fe;
     border-radius: 10px;
     padding: 20px;
-    
-}
-.addnew {
+  }
+  .addnew {
     display: flex;
     width: 100%;
-    height: 45px;    
+    height: 45px;
     align-items: center;
     justify-content: space-between;
-}
-.addnew input{
+  }
+  .addnew input {
     width: 85%;
     height: 90%;
     outline: none;
@@ -30,8 +28,8 @@ body{
     font-size: 17px;
     border-radius: 5px;
     padding-left: 15px;
-}
-.addnew button{
+  }
+  .addnew button {
     width: 50px;
     height: 100%;
     outline: none;
@@ -42,31 +40,31 @@ body{
     cursor: pointer;
     opacity: 0.6;
     /* pointer-events: none; */
-}
-/* .addnew button.active {
-    opacity: 1;
-    pointer-events: auto ;
-} */
-.controls {
+  }
+  /* .addnew button.active {
+      opacity: 1;
+      pointer-events: auto ;
+  } */
+  .controls {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 5px;
     border-bottom: 2px solid white;
-
-}
-.filters span{
+  }
+  .filters span {
     padding: 10px;
     font-size: 18px;
     cursor: pointer;
-}
-.filters span.active {
-    color:#4669A6;
-}
-.filters span:first-child{
+  }
+  .filters span.active {
+    color: #4669a6;
+  }
+  .filters span:first-child {
     margin-left: 0px;
-}
-.controls .btn_clear {
+  }
+  .controls .btn_clear {
+    width: 35%;
     outline: none;
     border: none;
     color: antiquewhite;
@@ -74,49 +72,47 @@ body{
     font-size: 15px;
     border-radius: 4px;
     padding: 7px 13px;
-    background: #4669A6;
-}
-.task-box{
+    background: #4669a6;
+  }
+  .task-box {
     width: 90%;
     align-self: center;
     padding: 0px;
-} 
-.task-box ul {
+  }
+  .task-box ul {
     /* height: 20px; */
     padding-left: 0;
     /* margin: 1px;
-    margin-left: 10px; */
-} 
-.litask{    
+      margin-left: 10px; */
+  }
+  .litask {
     list-style: none;
     height: 45px;
-    margin-top:15px ;
-    background: #4669A6;
+    margin-top: 15px;
+    background: #4669a6;
     border-radius: 10px;
-
-}
-.litask label{
+  }
+  .litask label {
     padding-top: 12px;
     height: 20px;
     display: flex;
-}
-.litask input{
+  }
+  .litask input {
     margin-left: 20px;
     outline: none;
     cursor: pointer;
     padding: 20px;
-    
-}
-
-.litask p{
+    text-decoration: line-through;
+  }
+  
+  .litask p {
     width: 70%;
     flex: 3 0 auto;
     margin-top: 2px;
     padding: 0%;
-}
-
-.litask button{
-    background-color: #4669A6;
+  }
+  .litask button {
+    background-color: #4669a6;
     height: 25px;
     width: 25px;
     border: none;
@@ -124,8 +120,12 @@ body{
     margin-top: -2px;
     border-radius: 5px;
     cursor: pointer;
-}
-.litask .fa {
+  }
+  .litask .fa {
     margin-left: -3px;
     margin-top: -1px;
-}
+  }
+  .litask label p.checked{
+    text-decoration: line-through;
+  }
+  
