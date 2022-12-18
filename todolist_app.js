@@ -25,8 +25,9 @@ function showTodos (){
 
 showTodos();
 
-
-function updateStatus(selectedTask) {
+// update status of todo list 
+function updateStatus(e, selectedTask) {
+    e.preventDefault();
     let taskName = selectedTask.parentElement.lastElementChild;
     if(selectedTask.checked) {
         taskName.classList.add("checked");
@@ -35,7 +36,7 @@ function updateStatus(selectedTask) {
         taskName.classList.remove("checked");
         todoArray[selectedTask.id].status = "pending";
     }
-    localStorage.setItem("todos", JSON.stringify(todoArray))
+    localStorage.setItem("todos", JSON.stringify(todoArray));
 
 }
 // create function for new task and put ins object then into arrye and save local storage
