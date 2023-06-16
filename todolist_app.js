@@ -26,12 +26,16 @@ function showTodos (){
 showTodos();
 
 // update status of todo list 
-function updateStatus(e, selectedTask) {
-    e.preventDefault();
+function updateStatus(selectedTask) {
+
     let taskName = selectedTask.parentElement.lastElementChild;
-    if(selectedTask.checked) {
+    console.log(taskName);
+
+    if(selectedTask.checked ) {
+        console.log(selectedTask.checked);
         taskName.classList.add("checked");
         todoArray[selectedTask.id].status = "completed";
+
     } else {
         taskName.classList.remove("checked");
         todoArray[selectedTask.id].status = "pending";
