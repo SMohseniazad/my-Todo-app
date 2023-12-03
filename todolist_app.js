@@ -41,6 +41,7 @@ function updateStatus(selectedTask) {
         todoArray[selectedTask.id].status = "pending";
     }
     localStorage.setItem("todos", JSON.stringify(todoArray));
+    showTodos();
 
 }
 // create function for new task and put ins object then into arrye and save local storage
