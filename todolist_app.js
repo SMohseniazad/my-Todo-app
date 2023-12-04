@@ -7,8 +7,14 @@ ulBox = document.querySelector(".ultask");
 let todoArray = JSON.parse(localStorage.getItem('todos')) || [] ;
 console.log(todoArray);
 // create li for Tasks
-function showTodos (){
-    const domTodo = todoArray.map((todo, id)=> { 
+function showTodos (filterType){
+    let filteredTodos = todoArray;
+    if(filterType === "completed"){
+        filteredTodos = todoArray.filter(todo => todo.status === "completed");
+    } else if(filterType === "pending"){
+        filteredTodos = todoArray.filter(todo => todo.status === "pending");
+    }
+    const domTodo = filteredTodos.map((todo, id)=> { 
         let isCompleted = todo.status == "completed" ? "checked" : "";
     console.log(todo);
     return (
@@ -19,7 +25,7 @@ function showTodos (){
                 <button onclick="deleteTask(${todo.id})"><i class="fa fa-close" style="font-size:24px"></i></button>
             </label>
         </li>`)
-});
+}); 
     ulBox.innerHTML= domTodo.join(" ");  
 }
 
